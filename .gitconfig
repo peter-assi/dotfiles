@@ -1,3 +1,8 @@
 [user]
 	name = peterlind
 	email = peter@lind.be
+[alias]
+        co = checkout
+        stat = status
+        ci = commit
+        df = !git diff | mvim -
