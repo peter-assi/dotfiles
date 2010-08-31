@@ -1,7 +1,5 @@
 # Fix for SIMBL colors (http://blog.infinitered.com/entries/show/6)
 export CLICOLOR=1;
-export TERM=xterm-color
-export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 
 export COLOR_NC='\e[0m' # No Color
 export COLOR_WHITE='\e[1;37m'
@@ -21,6 +19,10 @@ export COLOR_YELLOW='\e[1;33m'
 export COLOR_GRAY='\e[0;30m'
 export COLOR_LIGHT_GRAY='\e[0;37m'
 alias colorslist="set | egrep 'COLOR_\w*'"  # lists all the color
+
+# 
+export TERM=xterm-color
+export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 
 # prompt
 export PS1="\[${COLOR_LIGHT_PURPLE}\]\w $ \[${COLOR_NC}\]"
