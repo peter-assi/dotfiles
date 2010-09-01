@@ -28,7 +28,7 @@ export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export PS1="\[${COLOR_LIGHT_PURPLE}\]\w $ \[${COLOR_NC}\]"
 
 # git prompt
-source .git-completion.sh
+source ~/.git-completion.sh
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1="\[${COLOR_LIGHT_PURPLE}\]\w\[${COLOR_NC}\]$(__git_ps1 " (%s)")\[${COLOR_LIGHT_PURPLE}\] \$\[${COLOR_NC}\] "
