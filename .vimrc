@@ -30,3 +30,14 @@ let mapleader = "_"
 
 " use rvm with macruby
 map <Leader>r :w! <bar> !/Users/peterlind/.rvm/rubies/default/bin/ruby %<CR>
+
+" NERDTree
+map <Leader>d :execute 'NERDTreeToggle ' . getcwd()<CR> 
+
+" json, need to do: sudo cpan JSON::XS
+au BufRead,BufNewFile *.json set filetype=json
+map <leader>j  <Esc>:%!json_xs -f json -t json-pretty<CR>
+
+" format xml files (http://vim.wikia.com/wiki/Format_your_xml_document_using_xmllint)
+map <leader>x :silent 1,$!xmllint --format --recover - 2>/dev/null<CR>
+
