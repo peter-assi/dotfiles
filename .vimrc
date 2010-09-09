@@ -33,6 +33,7 @@ map <Leader>r :w! <bar> !/Users/peterlind/.rvm/rubies/default/bin/ruby %<CR>
 
 " NERDTree
 map <Leader>d :execute 'NERDTreeToggle ' . getcwd()<CR> 
+let NERDTreeShowHidden=1
 
 " json, need to do: sudo cpan JSON::XS
 au BufRead,BufNewFile *.json set filetype=json
