@@ -35,9 +35,9 @@ source ~/.git-completion.sh
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWDIRTYSTATE=1
 #export PS1="\[${COLOR_LIGHT_PURPLE}\]\w\[${COLOR_NC}\]$(__git_ps1 "(%s)")\[${COLOR_LIGHT_PURPLE}\] \$\[${COLOR_NC}\] "
-export PS1='\w$(__git_ps1 "(%s)") \$ '
-export PS1='\e[1;34m\w\e[0m $(__git_ps1 "(%s)") \e[1;35m\$ \e[0m'
-#export PS1="\[${COLOR_LIGHT_PURPLE}\]\w\[${COLOR_NC}\]$(__git_ps1 '(%s)') \[${COLOR_LIGHT_PURPLE}\]\$ \[${COLOR_NC}\]"
+#export PS1='\w$(__git_ps1 "(%s)") \$ '
+#export PS1='\e[1;34m\w\e[0m $(__git_ps1 "(%s)") \e[1;35m\$ \e[0m'
+export PS1='\[\e[1;34m\]\w\[\e[0m\] $(__git_ps1 "(%s)") \[\e[1;35m\]\$ \[\e[0m\]'
 
 # rspec
 export SPEC_OPTS="--color --format specdoc"
