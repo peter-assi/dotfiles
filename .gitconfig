@@ -4,5 +4,6 @@
 [alias]
         co = checkout
         stat = status
+        st = status
         ci = commit
         df = !git diff | mvim -

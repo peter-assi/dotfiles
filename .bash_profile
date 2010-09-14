@@ -1,6 +1,8 @@
 # increase the default 256 (did this for riak)
 ulimit -n 1024
 
+export EDITOR=/usr/bin/vim
+
 # Fix for SIMBL colors (http://blog.infinitered.com/entries/show/6)
 export CLICOLOR=1;
 
