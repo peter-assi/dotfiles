@@ -7,3 +7,5 @@
         st = status
         ci = commit
         df = !git diff | mvim -
+        lg = !git log | mvim -
+
