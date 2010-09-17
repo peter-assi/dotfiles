@@ -6,6 +6,6 @@
         stat = status
         st = status
         ci = commit
-        df = !git diff | mvim -
-        lg = !git log | mvim -
+        df = !git diff | vim -
+        lg = !git log | vim -
 
