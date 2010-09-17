@@ -4,6 +4,7 @@ ulimit -n 1024
 export EDITOR=/usr/bin/vim
 
 export HISTSIZE=5000
+export HISTCONTROL=ignoredups:erasedups
 
 # Fix for SIMBL colors (http://blog.infinitered.com/entries/show/6)
 export CLICOLOR=1;
