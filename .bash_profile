@@ -44,8 +44,11 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 #export PS1='\e[1;34m\w\e[0m $(__git_ps1 "(%s)") \e[1;35m\$ \e[0m'
 export PS1='\[\e[1;34m\]\w\[\e[0m\] $(__git_ps1 "(%s)") \[\e[1;35m\]\$ \[\e[0m\]'
 
-# rspec
+# rspec 1.x
 export SPEC_OPTS="--color --format specdoc"
+
+# rspec 2.x
+export SPEC_OPTS="--color --format doc"
 
 #clojure
 export PATH=$PATH:~/.cljr/bin
