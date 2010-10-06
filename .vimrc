@@ -4,6 +4,7 @@ syntax on
 "bling
 set background=dark
 colorscheme ir_black
+set gfn=Monaco:h12
 
 set showmode
 "set number
@@ -29,7 +30,7 @@ let g:clj_paren_rainbow=1           " Rainbow parentheses'!
 let mapleader = "_"
 
 " use rvm with macruby
-map <Leader>r :w! <bar> !/Users/peterlind/.rvm/rubies/default/bin/ruby %<CR>
+map <Leader>r :w! <bar> !~/.rvm/rubies/default/bin/ruby %<CR>
 
 " NERDTree
 map <Leader>d :execute 'NERDTreeToggle ' . getcwd()<CR> 
