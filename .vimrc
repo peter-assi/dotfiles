@@ -1,5 +1,5 @@
-"highlighting
-syntax on
+" We're running Vim, not Vi!
+set nocompatible      
 
 "bling
 set background=dark
@@ -14,8 +14,8 @@ set shiftwidth=2
 set shiftround
 set expandtab
 set autoindent
+set ai sw=2 sts=2 et
 
-set nocompatible      " We're running Vim, not Vi!
 syntax on             " Enable syntax highlighting
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
@@ -25,6 +25,9 @@ filetype plugin on    " Enable filetype-specific plugins
 set ignorecase
 set smartcase
 
+"jump to search term
+set incsearch
+
 " share buffer to osx clipboard
 set clipboard=unnamed
 
@@ -33,10 +36,13 @@ let g:clj_highlight_builtins=1      " Highlight Clojure's builtins
 let g:clj_paren_rainbow=1           " Rainbow parentheses'!
 
 " Easier use of Command-T (see http://vim.wikia.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_3))
-let mapleader = "_"
+let mapleader = "-"
 
-" use rvm with macruby
-map <Leader>r :w! <bar> !~/.rvm/rubies/default/bin/ruby %<CR>
+" highlight current line
+set cursorline
+
+" make sure to specify a default
+map <Leader>e :w! <bar> !~/.rvm/rubies/default/bin/ruby %<CR>
 
 " NERDTree
 map <Leader>d :execute 'NERDTreeToggle ' . getcwd()<CR> 
