@@ -9,6 +9,9 @@ set gfn=Monaco:h12
 set showmode
 "set number
 
+" show matching parentheses
+set showmatch
+
 " use indents of 2 spaces, and have them copied down lines:
 set shiftwidth=2
 set shiftround
@@ -20,6 +23,10 @@ syntax on             " Enable syntax highlighting
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
+
+"status bar
+set laststatus=2
+set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ Line:\ %l/%L:%c\ Filetype:\ %y\ Format:\ %{&ff}
 
 " make searches case-insensitive, unless they contain upper-case letters:
 set ignorecase
