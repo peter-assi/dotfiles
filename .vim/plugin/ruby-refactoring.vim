@@ -7,9 +7,17 @@
 " Acknowledgements:
 " Thanks to Gary Bernhardt for the inspiration for this tool and the original
 " ExtractVariable() and InlineTemp() functions.
+"
+" Some support functions borrowed from Luc Hermitte's lh-vim library
+"
+" Many, many thanks to Paul King for the great effort in writing a lot ot the
+" patterns found in this library and the endless nights he stays awake to make
+" this happen.
 
 " Support functions
 "
+" Synopsis:
+"   Returns the input given by the user
 function! s:get_input(message, error_message)
   let name = input(a:message)
   if name == ''
@@ -18,9 +26,78 @@ function! s:get_input(message, error_message)
   return name
 endfunction
 
+" Synopsis:
+"   Param: Optional parameter of '1' dictates cut, rather than copy
+"   Returns the text that was selected when the function was invoked
+"   without clobbering any registers
+function! s:get_visual_selection(...) 
+  try
+    let a_save = @a
+    if a:0 >= 1 && a:1 == 1
+      normal! gv"ad
+    else
+      normal! gv"ay
+    endif
+    return @a
+  finally
+    let @a = a_save
+  endtry
+endfunction
+
+" Synopsis:
+"   Copies, removes, then returns the text that was selected when the function was invoked
+"   without clobbering any registers
+function! s:cut_visual_selection() 
+  return s:get_visual_selection(1)
+endfunction
+
+" Synopsis:
+"   Loop over the line range given, global replace pattern with replace
+function! s:gsub_all_in_range(start_line, end_line, pattern, replace)
+  let lnum = a:start_line
+  while lnum <= a:end_line
+    let oldline = getline(lnum)
+    let newline = substitute(oldline,a:pattern,a:replace,'g')
+    call setline(lnum, newline)
+    let lnum = lnum + 1
+  endwhile
+endfunction!
+
+" Synopsis:
+"   Find start of pattern only, flags as per :h search()
+"   N.B. This only exists to allow ExtractMethod to work without matchit.vim
+function! s:get_start_of_block(pattern_start, flags)
+  let cursor_position = getpos(".")
+  let result = search(a:pattern_start, a:flags)
+  call setpos(".",cursor_position)
+
+  return result
+endfunction
+
+" Synopsis:
+"   Find pattern to matching end, flags as per :h search()
+function! s:get_range_for_block(pattern_start, flags)
+  " matchit.vim required 
+  if !exists("g:loaded_matchit") 
+    throw("matchit.vim (http://www.vim.org/scripts/script.php?script_id=39) required")
+  endif
+
+  let cursor_position = getpos(".")
+
+  " TODO: Need alternative to remove matchit.vim dep - matchpair() ?
+  let block_start = s:get_start_of_block(a:pattern_start, a:flags)
+  normal %
+  let block_end = line(".")
+
+  " Restore the cursor
+  call setpos(".",cursor_position) 
+
+  return [block_start, block_end]
+endfunction
+
 " Patterns
 
-" Synopsis
+" Synopsis:
 "   Adds a parameter (or many separated with commas) to a method
 function! AddParameter()
   try
@@ -51,7 +128,7 @@ function! AddParameter()
   call setpos(".", cursor_position)
 endfunction
 
-" Synopsis
+" Synopsis:
 "   Extracts the selected scope into a constant at the top of the current
 "   module or class
 function! ExtractConstant()
@@ -67,13 +144,13 @@ function! ExtractConstant()
   " Replace selected text with the constant's name
   exec "normal c" . name
   " Find the enclosing class or module
-  exec "?\\<class\\|module\\>"
+  exec "?^\\<class\\|module\\>"
   " Define the constant inside the class or module
   exec "normal! o" . name . " = " 
   normal! $p
 endfunction
 
-" Synopsis
+" Synopsis:
 "   Extracts the selected scope to a variable
 function! ExtractLocalVariable()
   try
@@ -94,62 +171,97 @@ function! ExtractLocalVariable()
   normal! $p
 endfunction
 
-" Synopsis
-"   Rename the selected local variable 
-function! RenameLocalVariable()
-  " matchit.vim required 
-  if !exists("g:loaded_matchit") 
-    echoerr "matchit.vim (http://www.vim.org/scripts/script.php?script_id=39) required for RenameLocalVariable()"
+" Synopsis:
+"   Rename the selected instance variable
+function! RenameInstanceVariable()
+  try
+    let selection = s:get_visual_selection()
+
+    " If no @ at the start of selection, then abort
+    if match( selection, "^@" ) == -1
+      let left_of_selection = getline(".")[col(".")-2]
+      if left_of_selection == "@"
+        let selection = "@".selection
+      else
+        throw "Selection '" . selection . "' is not an instance variable"
+      end
+    endif
+
+    let name = s:get_input("Rename to: @", "No variable name given!" )
+  catch
+    echo v:exception
     return
+  endtry
+
+  " Assume no prefix given
+  let name_no_prefix = name
+
+  " Add leading @ if none provided
+  if( match( name, "^@" ) == -1 )
+    let name = "@" . name
+  else
+    " Remove the @ from the no_prefix version
+    let name_no_prefix = matchstr(name,'^@\zs.*')
   endif
 
+  " Find the start and end of the current block
+  " TODO: tidy up if no matching 'def' found (start would be 0 atm)
+  let [block_start, block_end] = s:get_range_for_block('\<class\>','Wb')
+
+  " Rename the variable within the range of the block
+  call s:gsub_all_in_range(block_start, block_end, selection.'\>\ze\([^\(]\|$\)', name)
+
+  " copy with no prefix for the attr_* match
+  let selection_no_prefix = matchstr( selection, '^@\zs.*' )
+
+  " Rename attr_* symbols
+  call s:gsub_all_in_range(block_start, block_end, '^\s*attr_\(reader\|writer\|accessor\).*\:\zs'.selection_no_prefix, name_no_prefix)
+endfunction
+
+" Synopsis:
+"   Intending to pass all rename variable methods through here, allowing
+"   various conveniences. Allows normal mode rename of *local* variable under
+"   the cursor only, for now. 
+function! RenameVariableProxy() 
+  let selection = s:get_visual_selection()
+
+  let left_of_selection = getline(".")[col(".")-2]
+  if left_of_selection == "@"
+    throw "Use RenameInstanceVariable() to rename instance variables"
+  endif
+
+  call RenameLocalVariable()
+endfunction
+
+" Synopsis:
+"   Rename the selected local variable 
+function! RenameLocalVariable()
   try
+    let selection = s:get_visual_selection()
+
+    " If @ at the start of selection, then abort
+    if match( selection, "@" ) != -1
+      throw "Selection '" . selection . "' is not a local variable"
+    endif
+
     let name = s:get_input("Rename to: ", "No variable name given!" )
   catch
     echo v:exception
     return
   endtry
 
-  " Backup @a 
-  let old_register_a = @a
-
-  normal! gv
-
-  " Yank the variable name into it
-  normal "ay
-
-  " Mark current caret position
-  " FIXME: This doesn't capure column properly, because we're in visual mode
-  let cursor_position = getpos(".")
-
-  " Find the start ...
-  exec '?\<def\>'
-  let block_start = line(".")
-
-  " ... and end of the current block
-  " FIXME: Need an alternative to this to remove matchit.vim dep, search for 'end\n\n'? :-(
-  normal %
-  let block_end = line(".")
+  " Find the start and end of the current block
+  " TODO: tidy up if no matching 'def' found (start would be 0 atm)
+  let [block_start, block_end] = s:get_range_for_block('\<def\>','Wb')
 
   " Rename the variable within the range of the block
-  try
-    exec ':' . block_start . ',' . block_end . 's/\<\zs' . @a . '\>\ze\([^\(]\|$\)/' . name . '/'
-  catch
-    echoerr "Variable '" . @a . "' not found!"
-    return 
-  finally
-    " Restore @a
-    let @a = old_register_a
-    
-    " Restore caret position
-    call setpos(".",cursor_position) 
-  endtry
+  call s:gsub_all_in_range(block_start, block_end, '[^@]\<\zs'.selection.'\>\ze\([^\(]\|$\)', name)
 endfunction
 
-" Synopsis
+" Synopsis:
 "   Extracts the selected scope into a method above the scope of the
 "   current method
-function! ExtractMethod() range
+function! ExtractMethod() range 
   try
     let name = s:get_input("Method name: ", "No method name given!")
   catch
@@ -157,24 +269,56 @@ function! ExtractMethod() range
     return
   endtry
 
-  normal! gv
+  let selection = s:cut_visual_selection()
 
-  " Yank & Replace selected range with the method name
-  exec "normal C" . name
-  " Mark source position so we can jump back afterwards
-  " XXX: ideally shouldn't clobber this
-  normal ma
+  " Remove last \n if it exists, as we're adding one on prior to the 'end'
+  let has_trailing_newline = strridx(selection,"\n") == (strlen(selection) - 1) ? 1 : 0
 
-  exec "?\\<def\\>"
+  " Get the block for the current method
+  let method_start = s:get_start_of_block('\<def\>','Wb')
 
-  " Mark current position for reindenting the source
-  exec "normal! O" . "def " . name . "\nend\n"
+  " Build new method text, split into a list for easy insertion
+  let method_lines = split("def " . name . "\n" . selection . (has_trailing_newline ? "" : "\n") . "end\n", "\n", 1)
 
-  " Paste yanked range, select entire method & reindent, and jump back to
-  " starting position
-  normal kPkV}k=`a
+  " Start a line above, as we're appending, not inserting
+  let start_line_number = method_start - 1
+
+  " Sanity check
+  if start_line_number < 0 
+    let start_line_number = 0
+  endif
+
+  " Insert new method
+  call append(start_line_number, method_lines) 
+
+  " Insert call to new method, and fix up the source so it makes sense
+  if has_trailing_newline
+    exec "normal i" . name . "\n"
+    normal k
+  else
+    exec "normal i" . name 
+  end
+
+  " Reset cursor position
+  let cursor_position = getpos(".")
+
+  " Fix indent on call to method in case we corrupted it
+  normal V=
+  
+  " Indent new codeblock
+  exec "normal " . start_line_number . "GV" . len(method_lines) . "j="
+
+  " Jump back again, 
+  call setpos(".", cursor_position)
+
+  " Visual mode normally moves the caret, go back
+  if has_trailing_newline 
+    normal $
+  endif
 endfunction
 
+" Synopsis:
+"   Inlines a variable
 function! InlineTemp()
   " Copy the variable under the cursor into the 'a' register
   " XXX: How do I copy into a variable so I don't pollute the registers?
@@ -199,15 +343,34 @@ function! InlineTemp()
   exec ':.s/\<' . @a . '\>/' . @b
 endfunction
 
+" Commands:
+"
+" Using a simple 'R' prefix for now
+" TODO: Do we even need this prefix? How likely is it that we'll conflict?
+
+command! RAddParameter                  call AddParameter()
+command! RInlineTemp                    call InlineTemp()
+
+command! -range RExtractConstant        call ExtractConstant()
+command! -range RExtractLocalVariable   call ExtractLocalVariable()
+command! -range RRenameLocalVariable    call RenameLocalVariable()
+command! -range RRenameInstanceVariable call RenameInstanceVariable()
+command! -range RExtractMethod          call ExtractMethod()
+
 " Mappings:
 "
-" I have tried to use the mappings in a way that they describe the refactoring
-" pattern to be used.
-" I.e. Extract Method would be mapped to <leader>em
+" Default mappings are <leader>r followed by an acronym of the pattern's name
+" I.e. Extract Method is mapped to <leader>rem
 
-nnoremap <leader>rap :call AddParameter()<cr>
-vnoremap <leader>rec :call ExtractConstant()<cr>
-vnoremap <leader>relv :call ExtractLocalVariable()<cr>
-vnoremap <leader>rrlv :call RenameLocalVariable()<cr>
-vnoremap <leader>rem :call ExtractMethod()<cr>
-nnoremap <leader>rit :call InlineTemp()<cr>
+nnoremap <leader>rap  :RAddParameter<cr>
+nnoremap <leader>rit  :RInlineTemp<cr>
+
+vnoremap <leader>rec  :RExtractConstant<cr>
+vnoremap <leader>relv :RExtractLocalVariable<cr>
+vnoremap <leader>rrlv :RRenameLocalVariable<cr>
+vnoremap <leader>rriv :RRenameInstanceVariable<cr>
+vnoremap <leader>rem  :RExtractMethod<cr>
+
+" TODO: PPK - Revisit this, not convinced the proxy fn is such a good idea in retrospect 
+nnoremap <leader>rrlv viw:call RenameVariableProxy()<cr>
+
