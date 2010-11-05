@@ -26,7 +26,7 @@ filetype plugin on    " Enable filetype-specific plugins
 
 "status bar
 set laststatus=2
-set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ Line:\ %l/%L:%c\ Filetype:\ %y\ Format:\ %{&ff}
+set statusline=\ %F%m%r%h\ %w\ \ Line:\ %l/%L:%c\ Filetype:\ %y\ Format:\ %{&ff}
 
 " make searches case-insensitive, unless they contain upper-case letters:
 set ignorecase
