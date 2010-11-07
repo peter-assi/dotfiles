@@ -45,10 +45,11 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1='\[\e[1;34m\]\w\[\e[0m\] $(__git_ps1 "(%s)") \[\e[1;35m\]\$ \[\e[0m\]'
 
 # rspec 1.x
-export SPEC_OPTS="--color --format specdoc"
+#export SPEC_OPTS="--color --format specdoc"
+
 
 # rspec 2.x
-#export SPEC_OPTS="--color --format doc"
+export SPEC_OPTS="--color --format doc"
 
 #clojure
 export PATH=$PATH:~/.cljr/bin
@@ -60,3 +61,24 @@ fi
 if [ -f ~/.bash_aliases ]; then
   source ~/.bash_aliases
 fi 
+
+#rails 2/3
+function ss {
+  if [ -e "./script/server" ]; then
+    ./script/server
+  fi
+
+  if [ -e "./script/rails" ]; then
+    ./script/rails server
+  fi
+}
+
+function sc {
+  if [ -e "./script/console" ]; then
+    ./script/console
+  fi
+
+  if [ -e "./script/rails" ]; then
+    ./script/rails console
+  fi
+}
