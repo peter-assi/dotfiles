@@ -35,6 +35,9 @@ set smartcase
 "jump to search term
 set incsearch
 
+"highlight
+set hlsearch
+
 " share buffer to osx clipboard
 set clipboard=unnamed
 
