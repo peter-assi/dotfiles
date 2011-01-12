@@ -1,4 +1,8 @@
 begin
+  #rails logger
+  if defined? Rails
+     Rails.logger = Logger.new(STDOUT)
+  end
   # load wirble
   require 'rubygems'
   require 'wirble'

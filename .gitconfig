@@ -1,6 +1,8 @@
 [user]
 	name = peterlind
 	email = peter@lind.be
+[core]
+        excludesfile = ~/.gitexclude
 [alias]
         co = checkout
         stat = status
@@ -8,4 +10,5 @@
         ci = commit
         df = !git diff | vim -
         lg = !git log | vim -
+        history = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 
