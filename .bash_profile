@@ -5,6 +5,7 @@ export EDITOR=/usr/bin/vim
 
 export HISTSIZE=5000
 export HISTCONTROL=ignoredups:erasedups
+export HISTTIMEFORMAT='%F %T '
 
 # Fix for SIMBL colors (http://blog.infinitered.com/entries/show/6)
 export CLICOLOR=1;
