@@ -8,7 +8,7 @@
         stat = status
         st = status
         ci = commit
-        df = !git diff | vim -
+        df = !git diff | colordiff
         lg = !git log | vim -
         history = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 
