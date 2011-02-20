@@ -9,4 +9,5 @@ ln -s ~/dotfiles/.irbrc ~/
 ln -s ~/dotfiles/.vim ~/
 ln -s ~/dotfiles/.vimrc ~/
 ln -s ~/dotfiles/.gvimrc ~/
+ln -s ~/dotfiles/bin/ ~/bin
 
