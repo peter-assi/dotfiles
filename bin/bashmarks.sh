@@ -71,7 +71,7 @@ function d {
 }
 
 # list bookmarks with dirnam
-function l {
+function b {
     source $SDIRS
     env | grep "^DIR_" | cut -c5- | grep "^.*="
 }
