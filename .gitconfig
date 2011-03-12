@@ -2,7 +2,7 @@
 	name = peterlind
 	email = peter@lind.be
 [core]
-        excludesfile = ~/.gitexclude
+	excludesfile = ~/.gitignore.global
 [alias]
         co = checkout
         stat = status
