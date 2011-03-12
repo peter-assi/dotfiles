@@ -54,6 +54,9 @@ export SPEC_OPTS="--color --format doc"
 #clojure
 export PATH=$PATH:~/.cljr/bin
 
+# node
+export NODE_PATH=/usr/local/lib/node
+
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi 
