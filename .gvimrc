@@ -1,2 +1,2 @@
-autocmd VimEnter * NERDTree
+"autocmd VimEnter * NERDTree
 autocmd BufEnter * NERDTreeMirror
