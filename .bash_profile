@@ -55,7 +55,7 @@ export SPEC_OPTS="--color --format doc"
 export PATH=$PATH:~/.cljr/bin
 
 # node
-export NODE_PATH=/usr/local/lib/node
+export NODE_PATH=/usr/local/lib/node#:/usr/local/lib/node_modules
 
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
