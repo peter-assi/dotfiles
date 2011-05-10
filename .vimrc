@@ -3,7 +3,8 @@ set nocompatible
 
 "bling
 set background=dark
-colorscheme ir_black
+"colorscheme ir_black
+colorscheme solarized
 set gfn=Monaco:h12
 
 set showmode
