@@ -66,3 +66,10 @@ map <leader>j  <Esc>:%!json_xs -f json -t json-pretty<CR>
 " format xml files (http://vim.wikia.com/wiki/Format_your_xml_document_using_xmllint)
 map <leader>x :silent 1,$!xmllint --format --recover - 2>/dev/null<CR>
 
+" typo stuff
+cmap W w
+cmap Q q
+
+" move to previous/next line
+set whichwrap+=<,>,h,l,[,]
+
