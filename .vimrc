@@ -73,3 +73,8 @@ cmap Q q
 " move to previous/next line
 set whichwrap+=<,>,h,l,[,]
 
+" filetype to make html.erb snippets work
+" see
+" http://stackoverflow.com/questions/4658737/vim-html-erb-snippets-snipmate-need-a-vim-tip
+autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
+
