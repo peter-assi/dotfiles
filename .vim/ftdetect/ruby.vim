@@ -26,4 +26,4 @@ au BufNewFile,BufRead Gemfile				set filetype=ruby
 au BufNewFile,BufRead .autotest				set filetype=ruby
 
 " eRuby
-au BufNewFile,BufRead *.erb,*.rhtml			set filetype=eruby
+au BufNewFile,BufRead *.erb,*.rhtml			set filetype=eruby.rails.html
