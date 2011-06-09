@@ -78,3 +78,9 @@ set whichwrap+=<,>,h,l,[,]
 " http://stackoverflow.com/questions/4658737/vim-html-erb-snippets-snipmate-need-a-vim-tip
 autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
 
+"remove highlighted search results
+map <leader><leader> :noh<CR>
+
+" MacVIM shift+arrow-keys behavior (required in .vimrc)
+"let macvim_hig_shift_movement = 1
+
