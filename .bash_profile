@@ -57,10 +57,6 @@ export PATH=$PATH:~/.cljr/bin
 # node
 export NODE_PATH=/usr/local/lib/node#:/usr/local/lib/node_modules
 
-if [ -f ~/.bashrc ]; then
-  source ~/.bashrc
-fi 
-
 if [ -f ~/.bash_aliases ]; then
   source ~/.bash_aliases
 fi 
@@ -85,3 +81,11 @@ function sc {
     ./script/rails console $*
   fi
 }
+
+if [ -f ~/.bashrc ]; then
+  source ~/.bashrc
+fi 
+
+#rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
