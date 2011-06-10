@@ -6,7 +6,7 @@ alias ::='cd ../..'
 alias :::='cd ../../..'
 alias cd..='cd ..'
 
-alias tf='tail -f -n 200'
+alias tf='tail -F -n 200'
 alias h=history
 
 alias ls='ls -G'
