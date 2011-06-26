@@ -49,9 +49,6 @@ let g:clj_paren_rainbow=1           " Rainbow parentheses'!
 " Easier use of Command-T (see http://vim.wikia.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_3))
 let mapleader = "-"
 
-" highlight current line
-set cursorline
-
 " make sure to specify a default
 map <Leader>e :w! <bar> !~/.rvm/rubies/default/bin/ruby %<CR>
 
