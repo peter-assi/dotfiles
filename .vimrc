@@ -10,6 +10,8 @@ set gfn=Monaco:h12
 set showmode
 "set number
 
+" always diff vertical
+set diffopt=vertical
 " show matching parentheses
 set showmatch
 
