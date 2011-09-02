@@ -69,6 +69,10 @@ map <leader>x :silent 1,$!xmllint --format --recover - 2>/dev/null<CR>
 cmap W w
 cmap Q q
 
+"emacs stuff (only insert mode)
+inoremap  <C-E> <End>
+inoremap  <C-A> <Home>
+
 " move to previous/next line
 set whichwrap+=<,>,h,l,[,]
 
