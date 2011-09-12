@@ -92,3 +92,16 @@ map <leader><leader> :noh<CR>
 " MacVIM shift+arrow-keys behavior (required in .vimrc)
 "let macvim_hig_shift_movement = 1
 
+" Close all open buffers on entering a window if the only
+" buffer that's left is the NERDTree buffer
+autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
+
+function s:CloseIfOnlyNerdTreeLeft()
+  if exists("t:NERDTreeBufName")
+    if bufwinnr(t:NERDTreeBufName) != -1
+      if winnr("$") == 1
+        q
+      endif
+    endif
+  endif
+endfunction
