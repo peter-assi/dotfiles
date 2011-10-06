@@ -29,6 +29,10 @@ filetype plugin on    " Enable filetype-specific plugins
 "status bar
 set laststatus=2
 set statusline=\ %F%m%r%h\ %w\ \ Line:\ %l/%L:%c\ Filetype:\ %y\ Format:\ %{&ff}
+"syntastic
+set statusline+=\ %#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
 " make searches case-insensitive, unless they contain upper-case letters:
 set ignorecase
