@@ -95,12 +95,14 @@ map <leader><leader> :noh<CR>
 " buffer that's left is the NERDTree buffer
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
 
-function s:CloseIfOnlyNerdTreeLeft()
-  if exists("t:NERDTreeBufName")
-    if bufwinnr(t:NERDTreeBufName) != -1
-      if winnr("$") == 1
-        q
+if !exists("*s:CloseIfOnlyNerdTreeLeft")
+  function s:CloseIfOnlyNerdTreeLeft()
+    if exists("t:NERDTreeBufName")
+      if bufwinnr(t:NERDTreeBufName) != -1
+        if winnr("$") == 1
+          q
+        endif
       endif
     endif
-  endif
-endfunction
+  endfunction
+endif
