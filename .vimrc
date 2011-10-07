@@ -110,3 +110,7 @@ if !exists("*s:CloseIfOnlyNerdTreeLeft")
     endif
   endfunction
 endif
+
+autocmd BufRead,BufNewFile {*.md,*.mkd,*.markdown}    set ft=markdown
+autocmd BufRead,BufNewFile {*.json}                   set ft=javascript
+
