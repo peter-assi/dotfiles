@@ -1,7 +1,7 @@
 "autocmd VimEnter * NERDTree
 autocmd BufEnter * NERDTreeMirror
 
-colorscheme solarized
+"colorscheme solarized
 
 " highlight current line
 set cursorline
