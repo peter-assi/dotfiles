@@ -30,7 +30,7 @@ export COLOR_LIGHT_GRAY='\e[0;37m'
 alias colorslist="set | egrep 'COLOR_\w*'"  # lists all the color
 
 # 
-export TERM=xterm-color
+#export TERM=xterm-color
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 
 # prompt
@@ -89,3 +89,14 @@ fi
 #rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+if [[ "Darwin" == `uname -s` ]]; then
+   #remove LSCOLORS and GREP_COLOR so solarized and iterm are readable
+   unset LSCOLORS
+   unset GREP_COLOR
+
+   #check homebrew coreutils are installed
+   if [[ -f /usr/local/bin/gls ]]; then
+       eval "`gdircolors -b ~/.DIR_COLORS`"
+       alias ls="gls --color=auto"
+   fi
+fi
