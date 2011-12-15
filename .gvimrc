@@ -1,5 +1,5 @@
 "autocmd VimEnter * NERDTree
-autocmd BufEnter * NERDTreeMirror
+"autocmd BufEnter * NERDTreeMirror
 
 "colorscheme solarized
 
