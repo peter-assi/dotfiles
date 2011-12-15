@@ -17,6 +17,5 @@ alias less='less -r'
 
 alias brake='bundle exec rake'
 alias bopen='EDITOR=mvim bundle open'
-alias brspec='bundle exec rspec'
 
 
