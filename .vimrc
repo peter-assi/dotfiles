@@ -1,8 +1,11 @@
 " We're running Vim, not Vi!
-set nocompatible      
+set nocompatible
+
+" setup pathogen
+call pathogen#infect()
 
 "bling
-"set background=dark
+set background=dark
 "colorscheme ir_black
 colorscheme solarized
 set gfn=Monaco:h12
@@ -23,6 +26,7 @@ set autoindent
 set ai sw=2 sts=2 et
 
 syntax on             " Enable syntax highlighting
+syntax enable         " Enable syntax highlighting
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
