@@ -38,6 +38,7 @@ set statusline=\ %F%m%r%h\ %w\ \ Line:\ %l/%L:%c\ Filetype:\ %y\ Format:\ %{&ff}
 set statusline+=\ %#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+let g:syntastic_javascript_checker = "jshint"
 
 " make searches case-insensitive, unless they contain upper-case letters:
 set ignorecase
