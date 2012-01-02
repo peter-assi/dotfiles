@@ -70,8 +70,8 @@ map <leader>j  <Esc>:%!json_xs -f json -t json-pretty<CR>
 map <leader>x :silent 1,$!xmllint --format --recover - 2>/dev/null<CR>
 
 " typo stuff
-cmap W w
-cmap Q q
+cmap :W :w
+cmap :Q :q
 
 " Show unwanted whitespace
 set listchars=tab:-✈,trail:,extends:>
