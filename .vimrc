@@ -89,12 +89,6 @@ inoremap  <C-A> <Home>
 " move to previous/next line
 set whichwrap+=<,>,h,l,[,]
 
-" filetype to make html.erb snippets work
-" see
-" http://stackoverflow.com/questions/4658737/vim-html-erb-snippets-snipmate-need-a-vim-tip
-"MOVED TO ftdetect/ruby.vim
-"autocmd BufNewFile,BufRead *.html.erb set filetype=eruby.rails.html
-
 "remove highlighted search results
 map <leader><leader> :noh<CR>
 
@@ -119,4 +113,9 @@ endif
 
 autocmd BufRead,BufNewFile {*.md,*.mkd,*.markdown}    set ft=markdown
 autocmd BufRead,BufNewFile {*.json}                   set ft=javascript
+" filetype to make html.erb snippets work
+" see
+" http://stackoverflow.com/questions/4658737/vim-html-erb-snippets-snipmate-need-a-vim-tip
+autocmd BufNewFile,BufRead *.html.erb set filetype=eruby.html.rails
+
 
