@@ -116,6 +116,6 @@ autocmd BufRead,BufNewFile {*.json}                   set ft=javascript
 " filetype to make html.erb snippets work
 " see
 " http://stackoverflow.com/questions/4658737/vim-html-erb-snippets-snipmate-need-a-vim-tip
-autocmd BufNewFile,BufRead *.html.erb set filetype=eruby.html.rails
+autocmd BufNewFile,BufRead {*.html.erb,*.erb} set filetype=eruby.html.rails
 
 
