@@ -65,20 +65,36 @@ fi
 function ss {
   if [ -e "./script/server" ]; then
     ./script/server $*
+    return
+  fi
+
+  # binstubs
+  if [ -e "./bin/rails" ]; then
+    ./bin/rails server $*
+    return
   fi
 
   if [ -e "./script/rails" ]; then
     ./script/rails server $*
+    return
   fi
 }
 
 function sc {
   if [ -e "./script/console" ]; then
     ./script/console $*
+    return
+  fi
+
+  # binstubs
+  if [ -e "./bin/rails" ]; then
+    ./bin/rails console $*
+    return
   fi
 
   if [ -e "./script/rails" ]; then
     ./script/rails console $*
+    return
   fi
 }
 
