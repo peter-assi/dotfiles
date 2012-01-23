@@ -118,4 +118,7 @@ autocmd BufRead,BufNewFile {*.json}                   set ft=javascript
 " http://stackoverflow.com/questions/4658737/vim-html-erb-snippets-snipmate-need-a-vim-tip
 autocmd BufNewFile,BufRead {*.html.erb,*.erb} set filetype=eruby.html.rails
 
+" fix <C-]> mapping
+map <leader>f <C-]>
+
 
