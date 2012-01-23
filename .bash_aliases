@@ -9,6 +9,7 @@ alias h=history
 
 alias ls='ls -G'
 alias lrt='ls -lart'
+alias lt='ls -lat'
 alias ll='ls -lh'
 alias la='ls -A'
 alias l='ls -CF'
