@@ -11,5 +11,6 @@ ln -s ~/dotfiles/.vimrc ~/
 ln -s ~/dotfiles/.gvimrc ~/
 ln -s ~/dotfiles/.autotest ~/
 ln -s ~/dotfiles/.gemrc ~/
-ln -s ~/dotfiles/bin/ ~/bin
+ln -s ~/dotfiles/bin ~/bin
+ln -s ~/dotfiles/.git_template/ ~/
 
