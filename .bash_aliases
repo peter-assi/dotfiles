@@ -15,6 +15,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias less='less -r'
 
+alias fname='find . -name'
 
 alias brake='bundle exec rake'
 alias bopen='EDITOR=mvim bundle open'
