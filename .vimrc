@@ -120,6 +120,7 @@ autocmd BufNewFile,BufRead {*.html.erb,*.erb} set filetype=eruby.html.rails
 
 " fix <C-]> mapping
 map <leader>f <C-]>
+map <leader>g g]
 
 " look in .git for tags
 set tags=.git/tags
