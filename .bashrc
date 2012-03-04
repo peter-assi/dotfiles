@@ -1,6 +1,7 @@
 # bashmarks
 source ~/bin/bashmarks.sh
 
+complete -C ~/dotfiles/rake_completion -o default rake
 
       # Add the following to your ~/.bashrc or ~/.zshrc
       hitch() {
@@ -11,3 +12,5 @@ source ~/bin/bashmarks.sh
       # Uncomment to persist pair info between terminal instances
       # hitch
 
+# python scripts
+export PATH=$PATH:/usr/local/Cellar/python/2.7/bin

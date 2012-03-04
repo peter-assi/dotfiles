@@ -116,3 +116,7 @@ if [[ "Darwin" == `uname -s` ]]; then
        alias ls="gls --color=auto"
    fi
 fi
+
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
