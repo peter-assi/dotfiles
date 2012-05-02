@@ -67,3 +67,6 @@
 [submodule ".vim/bundle/vim-bufexplorer"]
 	path = .vim/bundle/vim-bufexplorer
 	url = https://github.com/thisivan/vim-bufexplorer.git
+[submodule ".vim/bundle/vim-css-color-ak"]
+	path = .vim/bundle/vim-css-color-ak
+	url = https://github.com/ap/vim-css-color.git
