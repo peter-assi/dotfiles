@@ -58,7 +58,9 @@ let g:clj_highlight_builtins=1      " Highlight Clojure's builtins
 let g:clj_paren_rainbow=1           " Rainbow parentheses'!
 
 " Easier use of Command-T (see http://vim.wikia.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_3))
-let mapleader = "-"
+"let mapleader = "-"
+"let mapleader = "/"
+let mapleader = ","
 
 " make sure to specify a default
 map <Leader>e :w! <bar> !~/.rvm/rubies/default/bin/ruby %<CR>
@@ -127,4 +129,3 @@ map <leader>g g]
 
 " look in .git for tags
 set tags=.git/tags
-
