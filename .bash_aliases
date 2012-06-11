@@ -21,3 +21,5 @@ alias brake='bundle exec rake'
 alias bopen='EDITOR=mvim bundle open'
 alias bcuke='bundle exec cucumber'
 alias brspec='bundle exec rspec'
+
+alias gitpull='find . -type d -name .git   | xargs -n 1 dirname   | while read line; do cd $line && git pull && cd .. ; done'
