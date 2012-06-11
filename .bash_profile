@@ -120,3 +120,9 @@ fi
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
+
+# binstubs w/o rvm
+# https://twitter.com/tpope/statuses/165631968996900865
+export PATH=".git/safe/../../bin:$PATH"
+
+
