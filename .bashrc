@@ -1,6 +1,3 @@
-# bashmarks
-source ~/bin/bashmarks.sh
-
 complete -C ~/dotfiles/rake_completion -o default rake
 
       # Add the following to your ~/.bashrc or ~/.zshrc
