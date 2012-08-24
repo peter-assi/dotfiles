@@ -63,8 +63,14 @@ fi
 
 #rails 2/3
 function ss {
-  if [ -e "./script/server" ]; then
-    ./script/server $*
+#  if [ -e "./script/server" ]; then
+#    ./script/server $*
+#    return
+#  fi
+
+  #foreman
+  if [ -e "./Procfile" ]; then
+    foreman start $*
     return
   fi
 
@@ -128,6 +134,9 @@ export PATH=".git/safe/../../bin:$PATH"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# build old rubies in mountain lion
+export CPPFLAGS=-I/opt/X11/include
 
 # autojump
 if [ -f `brew --prefix`/etc/autojump ]; then
