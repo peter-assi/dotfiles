@@ -8,6 +8,8 @@ complete -C ~/dotfiles/rake_completion -o default rake
       alias unhitch='hitch -u'
       # Uncomment to persist pair info between terminal instances
       # hitch
+# z
+. `brew --prefix`/etc/profile.d/z.sh
 
-# python scripts
+### python scripts
 export PATH=$PATH:/usr/local/Cellar/python/2.7/bin
