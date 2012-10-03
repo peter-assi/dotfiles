@@ -11,5 +11,5 @@ complete -C ~/dotfiles/rake_completion -o default rake
 # z
 . `brew --prefix`/etc/profile.d/z.sh
 
-### python scripts
-export PATH=$PATH:/usr/local/Cellar/python/2.7/bin
+#prefer local brews
+export PATH=/usr/local/bin:$PATH
