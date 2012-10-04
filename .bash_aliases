@@ -27,3 +27,5 @@ alias gitpull='find . -type d -name .git   | xargs -n 1 dirname   | while read l
 alias fs='foreman start'
 
 alias spider='wget -r -nd --delete-after --level=5'
+
+alias netlisten='lsof -i -P | grep LISTEN'
