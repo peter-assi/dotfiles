@@ -129,3 +129,6 @@ map <leader>g g]
 
 " look in .git for tags
 set tags=.git/tags
+
+" use the_silver_searcher
+let g:ackprg = 'ag --nogroup --nocolor --column'
