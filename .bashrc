@@ -13,3 +13,7 @@ complete -C ~/dotfiles/rake_completion -o default rake
 
 #prefer local brews
 export PATH=/usr/local/bin:$PATH
+#add brew python to path
+export PATH=/usr/local/Cellar/python/2.7/bin:$PATH
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/Cellar/python/2.7/bin/virtualenvwrapper.sh
