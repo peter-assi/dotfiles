@@ -66,7 +66,8 @@ let mapleader = ","
 map <Leader>e :w! <bar> !~/.rbenv/shims/ruby %<CR>
 
 " NERDTree
-map <Leader>d :execute 'NERDTreeToggle ' . getcwd()<CR> 
+map <Leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
+map <Leader>df :execute 'NERDTreeFind '<CR>
 let NERDTreeShowHidden=1
 
 " json, need to do: sudo cpan JSON::XS
