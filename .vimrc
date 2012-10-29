@@ -63,7 +63,7 @@ let g:clj_paren_rainbow=1           " Rainbow parentheses'!
 let mapleader = ","
 
 " make sure to specify a default
-map <Leader>e :w! <bar> !~/.rvm/rubies/default/bin/ruby %<CR>
+map <Leader>e :w! <bar> !~/.rbenv/shims/ruby %<CR>
 
 " NERDTree
 map <Leader>d :execute 'NERDTreeToggle ' . getcwd()<CR> 
