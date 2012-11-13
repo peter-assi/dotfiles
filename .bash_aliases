@@ -29,3 +29,6 @@ alias fs='foreman start'
 alias spider='wget -r -nd --delete-after --level=5'
 
 alias netlisten='lsof -i -P | grep LISTEN'
+
+alias zrake='zeus rake'
+alias zrspec='zeus rspec'
