@@ -142,3 +142,6 @@ set tags=.git/tags
 
 " use the_silver_searcher
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" from billskog
+nmap <Leader>l O<Esc>"%pA:<C-R>=line(".")<CR><Esc>0d$"_ddu
