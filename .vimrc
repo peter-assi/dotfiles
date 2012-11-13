@@ -128,6 +128,10 @@ autocmd BufNewFile,BufRead {*.css.scss,*.scss} set filetype=scss.css
 autocmd BufNewFile,BufRead *.py setlocal shiftwidth=4
 autocmd BufNewFile,BufRead *.py setlocal softtabstop=4
 
+" java
+autocmd BufNewFile,BufRead *.java setlocal shiftwidth=4
+autocmd BufNewFile,BufRead *.java setlocal softtabstop=4
+
 
 " fix <C-]> mapping
 map <leader>f <C-]>
