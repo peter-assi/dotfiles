@@ -17,3 +17,6 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/Cellar/python/2.7/bin:$PATH
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/Cellar/python/2.7/bin/virtualenvwrapper.sh
+
+#node binaries
+export PATH=/usr/local/share/npm/bin:$PATH
