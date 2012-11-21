@@ -145,3 +145,12 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " from billskog
 nmap <Leader>l O<Esc>"%pA:<C-R>=line(".")<CR><Esc>0d$"_ddu
+
+" folding
+set foldmethod=syntax
+set foldlevel=10
+nnoremap <space> za
+
+" sanity
+map ö :
+map Ö :
