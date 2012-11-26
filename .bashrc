@@ -11,6 +11,13 @@ complete -C ~/dotfiles/rake_completion -o default rake
 # z
 . `brew --prefix`/etc/profile.d/z.sh
 
+
+#teh javas
+export JAVA_OPTS="-Dfile.encoding=utf-8"
+export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8"
+export MAVEN_OPTS="-Dfile.encoding=utf-8"
+export JAVA_HOME="$(/usr/libexec/java_home)"
+
 #prefer local brews
 export PATH=/usr/local/bin:$PATH
 #add brew python to path
