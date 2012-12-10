@@ -32,3 +32,6 @@ alias netlisten='lsof -i -P | grep LISTEN'
 
 alias zke='zeus rake'
 alias zrspec='zeus rspec'
+
+
+alias beanshell='java jline.ConsoleRunner bsh.Interpreter'
