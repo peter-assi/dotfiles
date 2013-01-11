@@ -15,7 +15,7 @@ complete -C ~/dotfiles/rake_completion -o default rake
 #teh javas
 export JAVA_OPTS="-Dfile.encoding=utf-8"
 export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8"
-export MAVEN_OPTS="-Dfile.encoding=utf-8"
+export MAVEN_OPTS="-Dfile.encoding=utf-8 -Xmx1024m"
 export JAVA_HOME="$(/usr/libexec/java_home)"
 
 #prefer local brews
