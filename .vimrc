@@ -154,6 +154,3 @@ nnoremap <space> za
 " sanity
 map ö :
 map Ö :
-
-set noballooneval
-

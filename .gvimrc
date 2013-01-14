@@ -8,3 +8,7 @@ set cursorline
 
 "no toolbar
 set guioptions-=T
+
+"no balloons
+set noballooneval
+
