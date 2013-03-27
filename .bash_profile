@@ -1,5 +1,5 @@
 # increase the default 256 (did this for riak)
-ulimit -n 1024
+ulimit -n 4096
 
 export EDITOR=/usr/bin/vim
 
