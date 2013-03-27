@@ -21,9 +21,15 @@ export JAVA_HOME="$(/usr/libexec/java_home)"
 #prefer local brews
 export PATH=/usr/local/bin:$PATH
 #add brew python to path
-export PATH=/usr/local/Cellar/python/2.7/bin:$PATH
+#export PATH=/usr/local/Cellar/python/2.7.3/bin:$PATH
+#add python executables
+export PATH=/usr/local/share/python:$PATH
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/Cellar/python/2.7/bin/virtualenvwrapper.sh
+source /usr/local/share/python/virtualenvwrapper.sh
+
+
+#modern openssl
+export PATH=`brew --prefix openssl`/bin:$PATH
 
 #node binaries
 export PATH=/usr/local/share/npm/bin:$PATH
