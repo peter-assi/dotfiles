@@ -3,7 +3,7 @@ ulimit -n 4096
 
 export EDITOR=/usr/bin/vim
 
-export HISTSIZE=5000
+export HISTSIZE=10000
 export HISTCONTROL=ignoredups:erasedups
 export HISTTIMEFORMAT='%F %T '
 
