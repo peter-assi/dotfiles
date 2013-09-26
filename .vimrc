@@ -11,7 +11,8 @@ colorscheme solarized
 set gfn=Monaco:h12
 
 set showmode
-"set number
+set number
+set relativenumber
 
 " always diff vertical
 set diffopt=vertical
