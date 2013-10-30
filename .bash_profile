@@ -1,7 +1,7 @@
 # increase the default 256 (did this for riak)
 ulimit -n 4096
 
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/local/bin/vim
 
 export HISTSIZE=10000
 export HISTCONTROL=ignoredups:erasedups
