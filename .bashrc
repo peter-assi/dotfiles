@@ -24,8 +24,8 @@ export PATH=/usr/local/bin:$PATH
 #export PATH=/usr/local/Cellar/python/2.7.3/bin:$PATH
 #add python executables
 export PATH=/usr/local/share/python:$PATH
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/share/python/virtualenvwrapper.sh
+#export WORKON_HOME=$HOME/.virtualenvs
+#source /usr/local/share/python/virtualenvwrapper.sh
 
 
 #modern openssl
