@@ -67,12 +67,6 @@
 [submodule ".vim/bundle/vim-css-color-ak"]
 	path = .vim/bundle/vim-css-color-ak
 	url = https://github.com/ap/vim-css-color.git
-[submodule ".vim/bundle/vim-numbertoggle"]
-	path = .vim/bundle/vim-numbertoggle
-	url = https://github.com/jeffkreeftmeijer/vim-numbertoggle.git
-[submodule ".vim/bundle/zencoding-vim"]
-	path = .vim/bundle/zencoding-vim
-	url = http://github.com/mattn/zencoding-vim.git
 [submodule ".vim/bundle/vim-bundler"]
 	path = .vim/bundle/vim-bundler
 	url = http://github.com/tpope/vim-bundler.git
@@ -82,6 +76,3 @@
 [submodule ".vim/bundle/VimClojure"]
 	path = .vim/bundle/VimClojure
 	url = git@github.com:vim-scripts/VimClojure.git
-[submodule ".vim/bundle/vim-scala"]
-	path = .vim/bundle/vim-scala
-	url = git@github.com:derekwyatt/vim-scala.git
