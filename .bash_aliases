@@ -33,5 +33,6 @@ alias netlisten='lsof -i -P | grep LISTEN'
 alias zke='zeus rake'
 alias zrspec='zeus rspec'
 
+alias popular="tail -n 2000 ~/.bash_history | cut -d ';' -f 2 | awk '{print $1 '' $2}' | sort | uniq -c | sort -rn"
 
 alias beanshell='java jline.ConsoleRunner bsh.Interpreter'
