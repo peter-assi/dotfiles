@@ -33,3 +33,10 @@ export PATH=`brew --prefix openssl`/bin:$PATH
 
 #node binaries
 export PATH=/usr/local/share/npm/bin:$PATH
+
+#rbenv
+#export PATH="$HOME/.rbenv/bin:$PATH"
+#eval "$(rbenv init -)"
+
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh

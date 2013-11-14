@@ -127,9 +127,6 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 # binstubs w/o rvm
 # https://twitter.com/tpope/statuses/165631968996900865
 export PATH=".git/safe/../../bin:$PATH"
