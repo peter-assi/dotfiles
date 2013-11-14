@@ -29,7 +29,6 @@ export COLOR_GRAY='\e[0;30m'
 export COLOR_LIGHT_GRAY='\e[0;37m'
 alias colorslist="set | egrep 'COLOR_\w*'"  # lists all the color
 
-# 
 #export TERM=xterm-color
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 
@@ -45,21 +44,12 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 #export PS1='\e[1;34m\w\e[0m $(__git_ps1 "(%s)") \e[1;35m\$ \e[0m'
 export PS1='\[\e[1;34m\]\w\[\e[0m\] $(__git_ps1 "(%s)") \[\e[1;35m\]\$ \[\e[0m\]'
 
-# rspec 1.x
-#export SPEC_OPTS="--color --format specdoc"
-
 # rspec 2.x
 export SPEC_OPTS="--color --format progress"
 
-#clojure
-export PATH=$PATH:~/.cljr/bin
-
-# node
-export NODE_PATH=/usr/local/lib/node#:/usr/local/lib/node_modules
-
 if [ -f ~/.bash_aliases ]; then
   source ~/.bash_aliases
-fi 
+fi
 
 #rails 2/3
 function ss {
@@ -107,9 +97,6 @@ function sc {
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi 
-
-#rvm
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 if [[ "Darwin" == `uname -s` ]]; then
    #remove LSCOLORS and GREP_COLOR so solarized and iterm are readable
