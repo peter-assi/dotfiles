@@ -39,5 +39,9 @@ export NODE_PATH=/usr/local/lib/node#:/usr/local/lib/node_modules
 #export PATH="$HOME/.rbenv/bin:$PATH"
 #eval "$(rbenv init -)"
 
+#chruby
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
+
+#default to 2.0
+chruby 2.0
