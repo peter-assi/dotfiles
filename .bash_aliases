@@ -36,3 +36,7 @@ alias zrspec='zeus rspec'
 alias popular="tail -n 2000 ~/.bash_history | cut -d ';' -f 2 | awk '{print $1 '' $2}' | sort | uniq -c | sort -rn"
 
 alias beanshell='java jline.ConsoleRunner bsh.Interpreter'
+
+alias gs='git status'
+alias gd='git diff'
+alias gc='git checkout'
