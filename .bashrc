@@ -43,5 +43,5 @@ export NODE_PATH=/usr/local/lib/node#:/usr/local/lib/node_modules
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 
-#default to 2.0
-chruby 2.0
+#default to 2.1
+chruby 2.1
