@@ -9,7 +9,7 @@
   co = checkout
   stat = status
   st = status
-  ci = commit
+  cm = commit
   df = !git diff | colordiff
   lg = !git log | vim -
   history = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
