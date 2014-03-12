@@ -121,9 +121,6 @@ autocmd BufRead,BufNewFile {*.json}                   set ft=javascript
 " http://stackoverflow.com/questions/4658737/vim-html-erb-snippets-snipmate-need-a-vim-tip
 autocmd BufNewFile,BufRead {*.html.erb,*.erb} set filetype=eruby.html.rails
 
-" color in scss files
-autocmd BufNewFile,BufRead {*.css.scss,*.scss} set filetype=scss.css
-
 " python
 autocmd BufNewFile,BufRead *.py setlocal shiftwidth=4
 autocmd BufNewFile,BufRead *.py setlocal softtabstop=4
