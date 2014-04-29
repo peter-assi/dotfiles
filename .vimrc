@@ -70,6 +70,8 @@ map <Leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 map <Leader>df :execute 'NERDTreeFind '<CR>
 let NERDTreeShowHidden=1
 
+map <Leader>t :execute 'CtrlP'<CR>
+
 " json, need to do: sudo cpan JSON::XS
 au BufRead,BufNewFile *.json set filetype=json
 map <leader>j  <Esc>:%!json_xs -f json -t json-pretty<CR>
