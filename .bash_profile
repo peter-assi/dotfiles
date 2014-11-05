@@ -32,6 +32,11 @@ alias colorslist="set | egrep 'COLOR_\w*'"  # lists all the color
 #export TERM=xterm-color
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 
+# avoid encoding issues
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 # prompt
 #export PS1="\[${COLOR_LIGHT_PURPLE}\]\w $ \[${COLOR_NC}\]"
 
