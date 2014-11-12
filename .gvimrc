@@ -3,9 +3,6 @@
 
 "colorscheme solarized
 
-" highlight current line
-set cursorline
-
 "no toolbar
 set guioptions-=T
 

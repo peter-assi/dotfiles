@@ -5,14 +5,16 @@ set nocompatible
 call pathogen#infect()
 
 "bling
-set background=dark
+"set background=dark
 "colorscheme ir_black
-colorscheme solarized
+"colorscheme solarized
+colorscheme dracula
 set gfn=Monaco:h12
 
 set showmode
 set number
 set relativenumber
+set cursorline
 
 " always diff vertical
 set diffopt=vertical
