@@ -14,7 +14,7 @@ alias unhitch='hitch -u'
 
 #teh javas
 export JAVA_OPTS="-Dfile.encoding=utf-8"
-export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8"
+export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8 -Xmx2048m"
 export MAVEN_OPTS="-Dfile.encoding=utf-8 -Xmx1024m"
 #export JAVA_HOME="$(/usr/libexec/java_home)"
 
