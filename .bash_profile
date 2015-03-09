@@ -58,10 +58,10 @@ fi
 
 #rails 2/3
 function ss {
-#  if [ -e "./script/server" ]; then
-#    ./script/server $*
-#    return
-#  fi
+  if [ -e "./script/server" ]; then
+    bundle exec ./script/server $*
+    return
+  fi
 
   #foreman
   if [ -e "./Procfile" ]; then
@@ -83,7 +83,7 @@ function ss {
 
 function sc {
   if [ -e "./script/console" ]; then
-    ./script/console $*
+    bundle exec ./script/console $*
     return
   fi
 
