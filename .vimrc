@@ -167,3 +167,7 @@ let g:syntastic_ruby_rubocop_args = "-c /Users/peter.lind/Projects/hemnet/hemnet
 " sanity
 map ö :
 map Ö :
+
+if has("gui_running")
+  :source ~/.gvimrc
+endif
