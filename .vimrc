@@ -152,6 +152,18 @@ set foldmethod=syntax
 set foldlevel=10
 nnoremap <space> za
 
+" lint js and jsx
+let g:syntastic_javascript_checkers = ['jsxhint']
+" maybe
+" let g:javascript_jshint_args = "-c
+" /home/rebecca/hemnet-ng/.javascript-style.json"
+
+" rubocop lint
+let g:syntastic_ruby_checkers = ['rubocop']
+", mri']
+"let g:syntastic_ruby_rubocop_exec = '/Users/peter.lind/dotfiles/rubocop.sh'
+let g:syntastic_ruby_rubocop_args = "-c /Users/peter.lind/Projects/hemnet/hemnet-ng/.rubocop.yml"
+
 " sanity
 map ö :
 map Ö :
