@@ -162,7 +162,7 @@ let g:syntastic_javascript_checkers = ['jsxhint']
 let g:syntastic_ruby_checkers = ['rubocop']
 ", mri']
 "let g:syntastic_ruby_rubocop_exec = '/Users/peter.lind/dotfiles/rubocop.sh'
-let g:syntastic_ruby_rubocop_args = "-c /Users/peter.lind/Projects/hemnet/hemnet-ng/.rubocop.yml"
+let g:syntastic_ruby_rubocop_args = "-c /Users/peterlind/Projects/hemnet/hemnet-ng/.rubocop.yml"
 
 " sanity
 map ö :

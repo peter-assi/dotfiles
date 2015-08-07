@@ -137,4 +137,4 @@ export RUBY_HEAP_FREE_MIN=500000
 shopt -s histappend
 
 #hemnet
-eval "$(/Users/peter.lind/Projects/hemnet/hemnet-terminal-command/bin/hemnet init -)"
+eval "$(/Users/peterlind/Projects/hemnet/hemnet-terminal-command/bin/hemnet init -)"
