@@ -3,4 +3,5 @@
 *.swo
 *.swm
 *.swn
+.netrwhist
 
