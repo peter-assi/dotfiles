@@ -164,6 +164,8 @@ let g:syntastic_ruby_checkers = ['rubocop']
 "let g:syntastic_ruby_rubocop_exec = '/Users/peter.lind/dotfiles/rubocop.sh'
 let g:syntastic_ruby_rubocop_args = "-c /Users/peterlind/Projects/hemnet/hemnet-ng/.rubocop.yml"
 
+let g:syntastic_scss_checkers = ['scss_lint']
+
 " sanity
 map ö :
 map Ö :
