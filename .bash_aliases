@@ -40,7 +40,10 @@ alias beanshell='java jline.ConsoleRunner bsh.Interpreter'
 
 alias gs='git status'
 alias gd='git diff'
+alias gds='git diff --staged'
 alias gc='git checkout'
 alias ga='git add'
 alias gh='git history'
 alias gg='git grep'
+
+alias mcr='launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist && launchctl load ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist'
