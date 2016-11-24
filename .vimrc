@@ -13,7 +13,6 @@ set gfn=Monaco:h12
 
 set showmode
 set number
-set relativenumber
 set cursorline
 
 " always diff vertical
