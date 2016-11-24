@@ -15,6 +15,7 @@
   history = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   unpushed = !"PROJ_BRANCH=$(git symbolic-ref HEAD | sed 's|refs/heads/||') && git log origin/$PROJ_BRANCH..HEAD"
   unpulled = !"PROJ_BRANCH=$(git symbolic-ref HEAD | sed 's|refs/heads/||') && git fetch && git log HEAD..origin/$PROJ_BRANCH"
+  churn = !"git log --all -M -C --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort -n | awk 'BEGIN {print \"count\tfile\"} {print $1 \"\t\" $2}'"
   undo-commit = 'reset --soft HEAD^'
 [push]
   # Push current branch even if you've never pushed it before
