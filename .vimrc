@@ -1,3 +1,5 @@
+scriptencoding utf-8
+set encoding=utf-8
 " We're running Vim, not Vi!
 set nocompatible
 
@@ -85,7 +87,8 @@ cmap :W :w
 cmap :Q :q
 
 " Show unwanted whitespace
-set listchars=tab:-✈,trail:,extends:>
+"set listchars=tab:-✈,trail:,extends:>
+set listchars=tab:->,trail:,extends:>
 set list!
 
 "emacs stuff (only insert mode)
@@ -152,15 +155,10 @@ set foldlevel=10
 nnoremap <space> za
 
 " lint js and jsx
-let g:syntastic_javascript_checkers = ['jsxhint']
-" maybe
-" let g:javascript_jshint_args = "-c
-" /home/rebecca/hemnet-ng/.javascript-style.json"
+let g:syntastic_javascript_checkers = ['eslint']
 
 " rubocop lint
 let g:syntastic_ruby_checkers = ['rubocop']
-", mri']
-"let g:syntastic_ruby_rubocop_exec = '/Users/peter.lind/dotfiles/rubocop.sh'
 let g:syntastic_ruby_rubocop_args = "-c /Users/peterlind/Projects/hemnet/hemnet-ng/.rubocop.yml"
 
 let g:syntastic_scss_checkers = ['scss_lint']
