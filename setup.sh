@@ -5,7 +5,6 @@ ln -s ~/dotfiles/.bashrc ~/
 ln -s ~/dotfiles/.git-completion.sh ~/
 ln -s ~/dotfiles/.gitconfig ~/
 ln -s ~/dotfiles/.gitignore.global ~/
-ln -s ~/dotfiles/.irbrc ~/
 ln -s ~/dotfiles/.vim ~/
 ln -s ~/dotfiles/.vimrc ~/
 ln -s ~/dotfiles/.gvimrc ~/
