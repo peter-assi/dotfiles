@@ -164,6 +164,8 @@ let g:syntastic_scss_checkers = ['scss_lint']
 map ö :
 map Ö :
 
+runtime macros/matchit.vim
+
 if has("gui_running")
   :source ~/.gvimrc
 endif
