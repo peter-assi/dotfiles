@@ -61,12 +61,10 @@ let vimclojure#HighlightBuiltins=1
 let vimclojure#ParenRainbow=1
 
 " Easier use of Command-T (see http://vim.wikia.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_3))
-"let mapleader = "-"
-"let mapleader = "/"
 let mapleader = ","
 
 " make sure to specify a default
-map <Leader>e :w! <bar> !~/.rbenv/shims/ruby %<CR>
+map <Leader>e :w! <bar> !ruby %<CR>
 
 " NERDTree
 map <Leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
@@ -159,7 +157,6 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 " rubocop lint
 let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_ruby_rubocop_args = "-c /Users/peterlind/Projects/hemnet/hemnet-ng/.rubocop.yml"
 
 let g:syntastic_scss_checkers = ['scss_lint']
 
