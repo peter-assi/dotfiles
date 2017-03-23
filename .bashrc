@@ -34,6 +34,7 @@ export PATH=`brew --prefix openssl`/bin:$PATH
 
 # node
 export NODE_PATH=/usr/local/lib/node#:/usr/local/lib/node_modules
+export PATH=`brew --prefix node`/bin:$PATH
 
 #rbenv
 #export PATH="$HOME/.rbenv/bin:$PATH"
