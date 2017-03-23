@@ -8,4 +8,5 @@ set guioptions-=T
 
 "no balloons
 set noballooneval
+let g:syntastic_enable_balloons = 0
 
