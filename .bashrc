@@ -44,4 +44,4 @@ export PATH=`brew --prefix node`/bin:$PATH
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
-chruby 2.3.0
+chruby ruby 2.2.0
