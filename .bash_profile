@@ -65,7 +65,7 @@ function ss {
 
   #foreman/shoreman
   if [ -e "./Procfile" ]; then
-    shoreman start $*
+    shoreman $*
     return
   fi
 
