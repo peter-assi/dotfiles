@@ -47,4 +47,4 @@ alias gh='git history'
 alias gg='git grep'
 alias polpop='git stash && git pull && git stash pop'
 
-alias mcr='launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist && launchctl load ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist'
+alias mcr='brew services restart memcached'
