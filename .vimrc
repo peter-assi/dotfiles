@@ -154,6 +154,7 @@ nnoremap <space> za
 
 " lint js and jsx
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = '$(yarn bin)/eslint'
 
 " rubocop lint
 let g:syntastic_ruby_checkers = ['rubocop']
