@@ -101,7 +101,7 @@ function sc {
 
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
-fi 
+fi
 
 if [[ "Darwin" == `uname -s` ]]; then
    #remove LSCOLORS and GREP_COLOR so solarized and iterm are readable
@@ -118,14 +118,6 @@ fi
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
-
-# binstubs w/o rvm
-# https://twitter.com/tpope/statuses/165631968996900865
-export PATH=".git/safe/../../bin:$PATH"
-
-
-# build old rubies in mountain lion
-export CPPFLAGS=-I/opt/X11/include
 
 # make them rubies faster
 export RUBY_GC_HEAP_INIT_SLOTS=1000000

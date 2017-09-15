@@ -45,3 +45,7 @@ source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
 chruby ruby 2.2.0
+
+# project local bins
+# https://twitter.com/tpope/statuses/165631968996900865
+export PATH=".git/safe/../../bin:.git/safe/../../node_modules/.bin/:$PATH"
