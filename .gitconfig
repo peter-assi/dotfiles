@@ -26,3 +26,5 @@
   templatedir = ~/.git_template
 [branch]
   autosetuprebase = always
+[diff]
+	colorMoved = zebra
