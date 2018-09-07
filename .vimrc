@@ -159,7 +159,7 @@ let g:syntastic_javascript_eslint_exe = '$(yarn bin)/eslint'
 " rubocop lint
 let g:syntastic_ruby_checkers = ['rubocop']
 
-let g:syntastic_scss_checkers = ['scss_lint']
+let g:syntastic_scss_checkers = ['sass-lint']
 
 " sanity
 map ö :
