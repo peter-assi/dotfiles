@@ -41,10 +41,10 @@ export PATH=`brew --prefix node`/bin:$PATH
 #eval "$(rbenv init -)"
 
 #chruby
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-
-chruby ruby 2.2.0
+#source /usr/local/share/chruby/chruby.sh
+#source /usr/local/share/chruby/auto.sh
+#
+#chruby ruby 2.2.0
 
 # project local bins
 # https://twitter.com/tpope/statuses/165631968996900865
