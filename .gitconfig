@@ -1,6 +1,6 @@
 [user]
-  name = peterlind
-  email = peter@lind.be
+  name = Peter Lind
+  useConfigOnly = true
 [core]
   excludesfile = ~/.gitignore.global
   autocrlf = input
