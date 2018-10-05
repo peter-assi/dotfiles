@@ -1,93 +1,93 @@
 [submodule ".vim/bundle/vim-colors-solarized"]
-	path = .vim/bundle/vim-colors-solarized
+	path = vim/bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
 [submodule ".vim/bundle/vim-ruby"]
-	path = .vim/bundle/vim-ruby
+	path = vim/bundle/vim-ruby
 	url = git://github.com/vim-ruby/vim-ruby
 [submodule ".vim/bundle/vim-endwise"]
-	path = .vim/bundle/vim-endwise
+	path = vim/bundle/vim-endwise
 	url = git://github.com/tpope/vim-endwise
 [submodule ".vim/bundle/vim-rails"]
-	path = .vim/bundle/vim-rails
+	path = vim/bundle/vim-rails
 	url = git://github.com/tpope/vim-rails
 [submodule ".vim/bundle/vim-repeat"]
-	path = .vim/bundle/vim-repeat
+	path = vim/bundle/vim-repeat
 	url = git://github.com/tpope/vim-repeat
 [submodule ".vim/bundle/vim-surround"]
-	path = .vim/bundle/vim-surround
+	path = vim/bundle/vim-surround
 	url = git://github.com/tpope/vim-surround
 [submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
+	path = vim/bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree
 [submodule ".vim/bundle/vim-cucumber"]
-	path = .vim/bundle/vim-cucumber
+	path = vim/bundle/vim-cucumber
 	url = git://github.com/tpope/vim-cucumber
 [submodule ".vim/bundle/syntastic"]
-	path = .vim/bundle/syntastic
+	path = vim/bundle/syntastic
 	url = git://github.com/scrooloose/syntastic
 [submodule ".vim/bundle/vim-javascript"]
-	path = .vim/bundle/vim-javascript
+	path = vim/bundle/vim-javascript
 	url = git://github.com/pangloss/vim-javascript
 [submodule ".vim/bundle/supertab"]
-	path = .vim/bundle/supertab
+	path = vim/bundle/supertab
 	url = git://github.com/ervandew/supertab
 [submodule ".vim/bundle/MatchTag"]
-	path = .vim/bundle/MatchTag
+	path = vim/bundle/MatchTag
 	url = git://github.com/gregsexton/MatchTag
 [submodule ".vim/bundle/vim-rspec"]
-	path = .vim/bundle/vim-rspec
+	path = vim/bundle/vim-rspec
 	url = git://github.com/skwp/vim-rspec
 [submodule ".vim/bundle/ack.vim"]
-	path = .vim/bundle/ack.vim
+	path = vim/bundle/ack.vim
 	url = git://github.com/mileszs/ack.vim
 [submodule ".vim/bundle/vim-matchit"]
 	path = .vim/bundle/vim-matchit
 	url = git://github.com/edsono/vim-matchit
 [submodule ".vim/bundle/git-grep-vim"]
-	path = .vim/bundle/git-grep-vim
+	path = vim/bundle/git-grep-vim
 	url = git://github.com/tjennings/git-grep-vim
 [submodule ".vim/bundle/vim-ruby-refactoring"]
-	path = .vim/bundle/vim-ruby-refactoring
+	path = vim/bundle/vim-ruby-refactoring
 	url = git://github.com/ecomba/vim-ruby-refactoring
 [submodule ".vim/bundle/html5.vim"]
-	path = .vim/bundle/html5.vim
+	path = vim/bundle/html5.vim
 	url = git://github.com/othree/html5.vim
 [submodule ".vim/bundle/vim-rooter"]
-	path = .vim/bundle/vim-rooter
+	path = vim/bundle/vim-rooter
 	url = https://github.com/airblade/vim-rooter.git
 [submodule ".vim/bundle/vim-bufexplorer"]
-	path = .vim/bundle/vim-bufexplorer
+	path = vim/bundle/vim-bufexplorer
 	url = https://github.com/thisivan/vim-bufexplorer.git
 [submodule ".vim/bundle/vim-css-color-ak"]
-	path = .vim/bundle/vim-css-color-ak
+	path = vim/bundle/vim-css-color-ak
 	url = https://github.com/ap/vim-css-color.git
 [submodule ".vim/bundle/vim-bundler"]
-	path = .vim/bundle/vim-bundler
+	path = vim/bundle/vim-bundler
 	url = http://github.com/tpope/vim-bundler.git
 [submodule ".vim/bundle/vim-rake"]
-	path = .vim/bundle/vim-rake
+	path = vim/bundle/vim-rake
 	url = http://github.com/tpope/vim-rake.git
 [submodule ".vim/bundle/VimClojure"]
-	path = .vim/bundle/VimClojure
+	path = vim/bundle/VimClojure
 	url = git@github.com:vim-scripts/VimClojure.git
 [submodule ".vim/bundle/vim-jade"]
-	path = .vim/bundle/vim-jade
+	path = vim/bundle/vim-jade
 	url = git@github.com:digitaltoad/vim-jade.git
 [submodule ".vim/bundle/ctrlp.vim"]
-	path = .vim/bundle/ctrlp.vim
+	path = vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
 [submodule ".vim/bundle/vim-scala"]
-	path = .vim/bundle/vim-scala
+	path = vim/bundle/vim-scala
 	url = git@github.com:derekwyatt/vim-scala.git
 [submodule ".vim/bundle/vim-jsx"]
-	path = .vim/bundle/vim-jsx
+	path = vim/bundle/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
 [submodule ".vim/bundle/vim-indexed-search"]
-	path = .vim/bundle/vim-indexed-search
+	path = vim/bundle/vim-indexed-search
 	url = git@github.com:henrik/vim-indexed-search.git
 [submodule ".vim/bundle/ale"]
-	path = .vim/bundle/ale
+	path = vim/bundle/ale
 	url = https://github.com/w0rp/ale.git
 [submodule ".vim/bundle/vim-fugitive"]
-	path = .vim/bundle/vim-fugitive
+	path = vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
