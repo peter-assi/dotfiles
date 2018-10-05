@@ -73,9 +73,9 @@ let NERDTreeShowHidden=1
 
 map <Leader>t :execute 'CtrlP'<CR>
 
-" json, need to do: sudo cpan JSON::XS
+" json
 au BufRead,BufNewFile *.json set filetype=json
-map <leader>j  <Esc>:%!json_xs -f json -t json-pretty<CR>
+map <leader>j  <Esc>:%!json_pp<CR>
 
 " format xml files (http://vim.wikia.com/wiki/Format_your_xml_document_using_xmllint)
 map <leader>x :silent 1,$!xmllint --format --recover - 2>/dev/null<CR>
