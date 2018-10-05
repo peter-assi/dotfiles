@@ -1,3 +1,4 @@
+#!/bin/bash
 # increase the default 256 (did this for riak)
 ulimit -n 4096
 
@@ -27,7 +28,7 @@ export COLOR_BROWN='\e[0;33m'
 export COLOR_YELLOW='\e[1;33m'
 export COLOR_GRAY='\e[0;30m'
 export COLOR_LIGHT_GRAY='\e[0;37m'
-alias colorslist="set | egrep 'COLOR_\w*'"  # lists all the color
+alias colorslist="set | egrep 'COLOR_\\w*'"  # lists all the color
 
 #export TERM=xterm-color
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'

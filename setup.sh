@@ -1,3 +1,4 @@
+#!/bin/bash
 # Assume cloned into ~/dotfiles
 ln -s ~/dotfiles/.bash_aliases ~/
 ln -s ~/dotfiles/.bash_profile ~/
@@ -14,5 +15,3 @@ ln -s ~/dotfiles/bin ~/bin
 ln -s ~/dotfiles/.git_template ~/
 ln -s ~/dotfiles/.inputrc ~/
 ln -s ~/dotfiles/.pryrc ~/
-
-
