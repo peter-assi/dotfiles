@@ -15,3 +15,5 @@ ln -s ~/dotfiles/bin ~/bin
 ln -s ~/dotfiles/git_template ~/.git_template
 ln -s ~/dotfiles/inputrc ~/.inputrc
 ln -s ~/dotfiles/pryrc ~/.pryrc
+ln -s ~/dotfiles/ctags ~/.ctags
+ln -s ~/dotfiles/js-ctags-options ~/.js-ctags-options
