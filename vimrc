@@ -167,6 +167,9 @@ map Ö :
 
 runtime macros/matchit.vim
 
+" fugitive Ggrep open quickfix
+autocmd QuickFixCmdPost *grep* cwindow
+
 if has("gui_running")
   :source ~/.gvimrc
 endif
