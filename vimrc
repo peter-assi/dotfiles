@@ -73,10 +73,6 @@ let NERDTreeShowHidden=1
 
 map <Leader>t :execute 'CtrlP'<CR>
 
-" json
-au BufRead,BufNewFile *.json set filetype=json
-map <leader>j  <Esc>:%!json_pp<CR>
-
 " format xml files (http://vim.wikia.com/wiki/Format_your_xml_document_using_xmllint)
 map <leader>x :silent 1,$!xmllint --format --recover - 2>/dev/null<CR>
 
@@ -117,9 +113,12 @@ if !exists("*s:CloseIfOnlyNerdTreeLeft")
     endif
   endfunction
 endif
+" json
+
 
 autocmd BufRead,BufNewFile {*.md,*.mkd,*.markdown}    set ft=markdown
-autocmd BufRead,BufNewFile {*.json}                   set ft=javascript
+map <leader>j  <Esc>:%!json_pp<CR>
+autocmd BufRead,BufNewFile {*.json}                   set ft=json
 " filetype to make html.erb snippets work
 " see
 " http://stackoverflow.com/questions/4658737/vim-html-erb-snippets-snipmate-need-a-vim-tip
@@ -141,8 +140,8 @@ map <leader>g g]
 " look in .git for tags
 set tags=.git/tags
 
-" use the_silver_searcher
-let g:ackprg = 'ag --nogroup --nocolor --column'
+" use ripgrep
+let g:ackprg = 'rg --column'
 
 " from billskog
 nmap <Leader>l O<Esc>"%pA:<C-R>=line(".")<CR><Esc>0d$"_ddu
