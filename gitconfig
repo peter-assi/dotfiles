@@ -6,6 +6,7 @@
   autocrlf = input
   safecrlf = true
 [alias]
+  b = branch
   co = checkout
   stat = status
   st = status
@@ -27,4 +28,4 @@
 [branch]
   autosetuprebase = always
 [diff]
-	colorMoved = zebra
+  colorMoved = zebra
