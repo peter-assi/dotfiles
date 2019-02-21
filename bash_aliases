@@ -12,7 +12,7 @@ alias ls='ls -G'
 alias lrt='ls -lart'
 alias lt='ls -lat'
 alias ll='ls -lh'
-alias la='ls -A'
+alias la='ls -Al'
 alias l='ls -CF'
 alias less='less -R'
 
