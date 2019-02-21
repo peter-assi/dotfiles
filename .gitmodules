@@ -94,3 +94,6 @@
 [submodule "vim/bundle/js_alternate"]
 	path = vim/bundle/js_alternate
 	url = git@github.com:peterlind/js_alternate.vim.git
+[submodule "vim/bundle/typescript-vim"]
+	path = vim/bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
