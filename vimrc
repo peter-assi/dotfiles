@@ -169,8 +169,6 @@ runtime macros/matchit.vim
 " fugitive Ggrep open quickfix
 autocmd QuickFixCmdPost *grep* cwindow
 
-let g:ale_open_list = 1
-
 if has("gui_running")
   :source ~/.gvimrc
 endif
