@@ -11,7 +11,6 @@
   stat = status
   st = status
   cm = commit
-  df = !git diff | colordiff
   lg = !git log | vim -
   history = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   unpushed = !"PROJ_BRANCH=$(git symbolic-ref HEAD | sed 's|refs/heads/||') && git log origin/$PROJ_BRANCH..HEAD"
@@ -22,7 +21,8 @@
   # Push current branch even if you've never pushed it before
   default = current
 [color]
-  ui=auto
+  ui = auto
+  pager = true
 [init]
   templatedir = ~/.git_template
 [branch]
