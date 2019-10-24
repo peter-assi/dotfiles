@@ -169,6 +169,27 @@ runtime macros/matchit.vim
 " fugitive Ggrep open quickfix
 autocmd QuickFixCmdPost *grep* cwindow
 
+command PathFull let @+ = expand("%:p")              " full path
+nnoremap <leader>ff :PathFull<CR>|
+
+command PathRel let @+ = expand("%")                 " relative path
+nnoremap <leader>fr :PathRel<CR>|
+
+command PathFilename let @+ = expand("%:t")          " just filename
+nnoremap <leader>fn :PathName<CR>|
+
 if has("gui_running")
   :source ~/.gvimrc
 endif
+
+set backupdir=/tmp//
+set directory=/tmp//
+set undodir=/tmp//
+
+" prettier
+" Running before saving, changing text or leaving insert mode
+" when running at every change you may want to disable quickfix
+" let g:prettier#quickfix_enabled = 0
+let g:prettier#quickfix_auto_focus = 0
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
