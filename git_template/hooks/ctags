@@ -2,5 +2,5 @@
 #
 # see http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html
 rm -f .git/tags
-ctags --tag-relative -Rf.git/tags --exclude=.git --languages=-sql
+ctags --tag-relative -Rf.git/tags --exclude=.git --languages=-sql,-php
 
