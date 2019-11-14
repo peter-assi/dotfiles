@@ -2,6 +2,7 @@
 # increase the default 256 (did this for riak)
 ulimit -n 4096
 
+export BASH_SILENCE_DEPRECATION_WARNING=1
 export EDITOR=/usr/local/bin/vim
 
 export HISTSIZE=10000
