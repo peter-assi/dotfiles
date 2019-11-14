@@ -4,6 +4,7 @@ ulimit -n 4096
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export EDITOR=/usr/local/bin/vim
+export LESS='-FXR'
 
 export HISTSIZE=10000
 export HISTCONTROL=ignoredups:erasedups

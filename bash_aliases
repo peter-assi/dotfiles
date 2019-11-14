@@ -14,7 +14,6 @@ alias lt='ls -lat'
 alias ll='ls -lh'
 alias la='ls -Al'
 alias l='ls -CF'
-alias less='less -R'
 
 alias fname='find . -name'
 
