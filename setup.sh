@@ -3,7 +3,6 @@
 ln -s ~/dotfiles/bash_aliases ~/.bash_aliases
 ln -s ~/dotfiles/bash_profile ~/.bash_profile
 ln -s ~/dotfiles/bashrc ~/.bashrc
-ln -s ~/dotfiles/git-completion.sh ~/.git-completion.sh
 ln -s ~/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/dotfiles/gitignore.global ~/.gitignore.global
 ln -s ~/dotfiles/vim ~/.vim
