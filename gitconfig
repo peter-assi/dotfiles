@@ -29,3 +29,5 @@
   autosetuprebase = always
 [diff]
   colorMoved = zebra
+[protocol]
+  version = 2
