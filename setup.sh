@@ -1,5 +1,7 @@
 #!/bin/bash
 # Assume cloned into ~/dotfiles
+# first do
+# git submodule update --init --recursive
 ln -s ~/dotfiles/bash_aliases ~/.bash_aliases
 ln -s ~/dotfiles/bash_profile ~/.bash_profile
 ln -s ~/dotfiles/bashrc ~/.bashrc
