@@ -34,7 +34,7 @@ alias netlisten='lsof -i -P | grep LISTEN'
 alias zke='zeus rake'
 alias zrspec='zeus rspec'
 
-alias popular="tail -n 2000 ~/.bash_history | cut -d ';' -f 2 | awk '{print $1 '' $2}' | sort | uniq -c | sort -rn"
+alias popular="tail -n 4000 ~/.bash_history | sort | tail -n 2000 | cut -d ';' -f 2 | sort | uniq -c | sort -n"
 
 alias beanshell='java jline.ConsoleRunner bsh.Interpreter'
 
@@ -45,6 +45,9 @@ alias gc='git checkout'
 alias ga='git add'
 alias gh='git history'
 alias gg='git grep'
+alias gb='git branch'
+alias gl='git log'
 alias polpop='git stash && git pull && git stash pop'
 
+alias hostip="echo $(ifconfig | grep -E '([0-9]{1,3}\.){3}[0-9]{1,3}' | grep -v 127.0.0.1 | awk '{ print $2 }' | cut -f2 -d: | head -n2)"
 alias mcr='brew services restart memcached'
