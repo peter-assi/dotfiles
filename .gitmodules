@@ -106,3 +106,6 @@
 [submodule "vim/bundle/vim-localvimrc"]
 	path = vim/bundle/vim-localvimrc
 	url = https://github.com/embear/vim-localvimrc
+[submodule "vim/bundle/vim-terraform"]
+	path = vim/bundle/vim-terraform
+	url = https://github.com/hashivim/vim-terraform.git
