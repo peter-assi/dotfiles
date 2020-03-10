@@ -103,3 +103,6 @@
 [submodule "vim/bundle/vim-prettier"]
 	path = vim/bundle/vim-prettier
 	url = https://github.com/prettier/vim-prettier
+[submodule "vim/bundle/vim-localvimrc"]
+	path = vim/bundle/vim-localvimrc
+	url = https://github.com/embear/vim-localvimrc
