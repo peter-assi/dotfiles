@@ -49,7 +49,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 #export PS1="\[${COLOR_LIGHT_PURPLE}\]\w\[${COLOR_NC}\]$(__git_ps1 "(%s)")\[${COLOR_LIGHT_PURPLE}\] \$\[${COLOR_NC}\] "
 #export PS1='\w$(__git_ps1 "(%s)") \$ '
 #export PS1='\e[1;34m\w\e[0m $(__git_ps1 "(%s)") \e[1;35m\$ \e[0m'
-export PS1='\[\e[1;34m\]\w\[\e[0m\] $(__git_ps1 "(%s)") \[\e[1;35m\]\$ \[\e[0m\]'
+export PS1='\D{%T} \[\e[1;34m\]\w\[\e[0m\] $(__git_ps1 "(%s)") \[\e[1;35m\]\$ \[\e[0m\]'
 
 # rspec 2.x
 export SPEC_OPTS="--color --format progress"
