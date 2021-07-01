@@ -47,6 +47,7 @@ alias gh='git history'
 alias gg='git grep'
 alias gb='git branch'
 alias gl='git log'
+alias gdn='git diff --name-only'
 alias polpop='git stash && git pull && git stash pop'
 
 alias hostip="echo $(ifconfig | grep -E '([0-9]{1,3}\.){3}[0-9]{1,3}' | grep -v 127.0.0.1 | awk '{ print $2 }' | cut -f2 -d: | head -n2)"

@@ -151,18 +151,19 @@ set foldmethod=syntax
 set foldlevel=10
 nnoremap <space> za
 
-" lint js and jsx
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exe = '$(yarn bin)/eslint'
-
-" rubocop lint
-let g:syntastic_ruby_checkers = ['rubocop']
-
-let g:syntastic_scss_checkers = ['sass-lint']
+"" lint js and jsx
+"let g:syntastic_javascript_checkers = ['eslint']
+"let g:syntastic_javascript_eslint_exe = '$(yarn bin)/eslint'
+"
+"" rubocop lint
+"let g:syntastic_ruby_checkers = ['rubocop']
+"
+"let g:syntastic_scss_checkers = ['sass-lint']
 
 " sanity
 map ö :
 map Ö :
+command W w
 
 runtime macros/matchit.vim
 
@@ -192,4 +193,7 @@ set undodir=/tmp//
 " let g:prettier#quickfix_enabled = 0
 let g:prettier#quickfix_auto_focus = 0
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+augroup Prettier
+  autocmd!
+  autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+augroup  END
